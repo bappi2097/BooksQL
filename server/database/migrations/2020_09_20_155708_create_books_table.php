@@ -15,14 +15,13 @@ class CreateBooksTable extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->strin('title');
+            $table->string('title');
             $table->string('author');
             $table->string('image');
             $table->text('description')->nullable();
             $table->string('link')->nullable();
             $table->boolean('featured')->default(false);
-            $table->unsignedInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories')->onUpdate('cascade');
+            $table->foreignId('category_id')->on('categories')->onUpdate('cascade');
             $table->timestamps();
         });
     }

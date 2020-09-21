@@ -1,0 +1,43 @@
+"A date string with format `Y-m-d`, e.g. `2011-05-23`."
+scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
+
+"A datetime string with format `Y-m-d H:i:s`, e.g. `2018-05-23 13:43:32`."
+scalar DateTime
+@scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
+
+type Query {
+    users: [User!]! @paginate(defaultCount: 10)
+    user(id: ID @eq): User @find
+
+    books: [Book] @all
+    book(id: ID @eq): Book @find
+    booksByFeatured(featured: Boolean! @eq): [Book] @all
+    someComplexQuery(search: String!): [Book]
+    categories: [Category] @all
+    category(id: ID @eq): Category @find
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Book {
+    id: ID!
+    title: String!
+    author: String!
+    image: String
+    description: String
+    link: String
+    featured: Boolean
+    category: Category! @belongsTo
+}
+
+type Category {
+    id: ID!
+    name: String!
+    books: [Book] @hasMany
+}
