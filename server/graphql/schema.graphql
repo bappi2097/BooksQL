@@ -17,6 +17,42 @@ type Query {
     category(id: ID @eq): Category @find
 }
 
+type Mutation {
+    createCategory(
+        name: String! @rules(apply: ["required", "unique:categories,name"])
+    ): Category! @create
+
+    updateCategory(
+        id: ID! @rules(apply: ["required"])
+        name: String @rules(apply: ["required", "unique:categories,name"])
+    ): Category @update
+
+    deleteCategory(id: ID! @rules(apply: ["required"])): Category @delete
+
+    createBook(
+        title: String! @rules(apply: ["required"])
+        author: String! @rules(apply: ["required"])
+        image: String
+        link: String
+        description: String
+        featured: Boolean
+        category_id: Int!
+    ): Book @create
+
+    updateBook(
+        id: ID! @rules(apply: ["required"])
+        title: String! @rules(apply: ["required"])
+        author: String! @rules(apply: ["required"])
+        image: String
+        link: String
+        description: String
+        featured: Boolean
+        category_id: Int!
+    ): Book @update
+
+    deleteBook(id: ID! @rules(apply: ["required"])): Book @delete
+}
+
 type User {
     id: ID!
     name: String!
