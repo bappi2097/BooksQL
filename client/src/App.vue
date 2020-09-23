@@ -16,7 +16,13 @@
       </div>
     </div>
     <router-view />
+    <footer-view />
   </div>
 </template>
-
+<script>
+import FooterView from "./components/Footer";
+export default {
+  components: { FooterView },
+};
+</script>
 <style src="./assets/main.css"></style>
