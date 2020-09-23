@@ -1,12 +1,20 @@
 module.exports = {
   future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
+    // removeDeprecatedGapUtilities: false,
+    // purgeLayersByDefault: false,
   },
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Roboto"],
+      },
+    },
+    container: {
+      center: true,
+      padding: "1rem",
+    },
   },
   variants: {},
   plugins: [],
-}
+};
