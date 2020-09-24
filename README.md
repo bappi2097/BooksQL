@@ -4,17 +4,17 @@
 
 **This is a practice repo where I try to follow Andre Madarang tutorials and tools and technologies I have used are MongoDB, GraphQL, Vue.js &amp; Laravel.**
 
-### Link
+## Link
 
 **If You want to use this API, the link is [https://booksql-server.herokuapp.com/graphql](https://booksql-server.herokuapp.com/graphql). This Api hosted on [Heroku](https://www.heroku.com/).**
 
 **And Client site is live on this URL [BooksQL.Netlify.App](https://booksql.netlify.app/). Frontend Hosted on [Netlify.Com](https://www.netlify.com/)**
 
-### Upcoming Feature :thinking:
+## Upcoming Feature :thinking:
 
 **Yeh, I don't use MongoDB here and User Authentication also not used. These all will upcoming next.**
 
-### Contact :email:
+## Contact :email:
 
 **If you have any feedback feel free to contact**
 
