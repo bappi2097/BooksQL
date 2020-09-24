@@ -2,7 +2,7 @@
     <h1><a>BooksQL</a>😍</h1>
 </div>
 
-**This is a practice repo where i try to follow Andre Madarang tutorals and tools and technologies i have used are MongoDB, GraphQL, Vue.js &amp; Laravel.**
+**This is a practice repo where I try to follow Andre Madarang tutorials and tools and technologies I have used are MongoDB, GraphQL, Vue.js &amp; Laravel.**
 
 ### Link
 
