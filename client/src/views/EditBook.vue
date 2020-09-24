@@ -6,6 +6,7 @@
       method="post"
       @submit.prevent="editBook"
       class="w-full max-w-lg"
+      autocomplete="off"
     >
       <div class="form-group">
         <label
@@ -19,6 +20,7 @@
           id="title"
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
           v-model="title"
+          autofocus
         />
       </div>
       <div class="form-group">
@@ -99,8 +101,9 @@
                 v-for="category of data.categories"
                 :key="category.id"
                 :value="category.id"
-                >{{ category.name }}</option
               >
+                {{ category.name }}
+              </option>
             </select>
           </template>
         </ApolloQuery>
